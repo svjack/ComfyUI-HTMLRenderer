@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="template:media-width" content="1024">
+    <meta name="template:media-height" content="1024">
+    <meta name="viewport" content="width=1080, height=1920">
+    <title>图书解读 - 1080x1920</title>
+    <style>
+    @font-face {
+        font-family: 'SourceHanSansCN';
+        src: url('https://modelscope.cn/datasets/svjack/temp/resolve/master/SourceHanSansCN-Bold.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
+    @font-face {
+        font-family: 'SourceHanSansCN';
+        src: url('https://modelscope.cn/datasets/svjack/temp/resolve/master/SourceHanSansCN-Regular.ttf') format('truetype');
+        font-weight: bold;
+        font-style: normal;
+        font-display: swap;
+    }
+    @font-face {
+        font-family: 'LongCang';
+        src: url('https://modelscope.cn/datasets/svjack/temp/resolve/master/Long-Cang-Regular.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html, body { width: 1080px; height: 1920px; overflow: hidden; }
+
+        body {
+            font-family: 'SourceHanSansCN', sans-serif;
+            color: #fff;
+            position: relative;
+            background: #1a1a1a;
+            background-image: url("{{image}}");
+            background-size: cover;
+            background-position: center bottom 400px;
+        }
+
+        /* 顶部区域 */
+        .top-section {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            width: 90%;
+        }
+
+        .image {
+            position: absolute;
+            top: 400px;
+            left: 50%;
+            transform: translate(-50%);
+        }   
+
+        .title {
+            font-size: 100px;
+            font-weight: 900;
+            line-height: 1.1;
+            color: #000;
+            text-shadow: -3px -3px 0 #fff,
+                        3px -3px 0 #fff,
+                        -3px 3px 0 #fff,
+                        3px 3px 0 #fff;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        .subtitle {
+            font-size: 30px;
+            font-weight: 500;
+            color: #000;
+            text-shadow: -2px -2px 0 #fff,
+                        2px -2px 0 #fff,
+                        -2px 2px 0 #fff,
+                        2px 2px 0 #fff;
+            letter-spacing: 2px;
+        }
+
+        /* 底部文字区域 */
+        .bottom-section {
+            position: absolute;
+            top: 1000px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            width: 90%;
+        }
+
+        .main-text {
+            font-size: 50px;
+            font-weight: 700;
+            text-shadow: -2px -2px 0 #000,
+                        2px -2px 0 #000,
+                        -2px 2px 0 #000,
+                        2px 2px 0 #000;
+            margin-bottom: 15px;
+            letter-spacing: 3px;
+        }
+
+        .author {
+            font-size: 30px;
+            font-family: 'LongCang', cursive;
+            text-shadow: -1px -1px 0 #000,
+                        1px -1px 0 #000,
+                        -1px 1px 0 #000,
+                        1px 1px 0 #000;
+        }
+    </style>
+</head>
+<body>
+    <!-- 顶部标题区 -->
+    <div class="top-section">
+        <div class="title">{{title}}</div>
+        <div class="subtitle">{{subtitle=作者}}</div>
+    </div>
+
+    <!-- <img class="img" src="{{image}}" alt="内容图片"> -->
+    
+    <!-- 底部文字区 -->
+    <div class="bottom-section">
+        <div class="main-text">{{text}}</div>
+        <div class="author">{{author=@Pixelle.AI}}</div>
+    </div>
+</body>
+</html>

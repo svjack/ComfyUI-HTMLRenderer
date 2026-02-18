@@ -1,0 +1,110 @@
+{
+  "4": {
+    "inputs": {
+      "title": [
+        "10",
+        0
+      ],
+      "text": [
+        "11",
+        0
+      ],
+      "template_html": [
+        "8",
+        0
+      ],
+      "ext_json": "{}",
+      "output_width": [
+        "6",
+        0
+      ],
+      "output_height": [
+        "7",
+        0
+      ],
+      "image": [
+        "9",
+        0
+      ]
+    },
+    "class_type": "HTMLFrameRenderer",
+    "_meta": {
+      "title": "HTML Frame Renderer"
+    }
+  },
+  "5": {
+    "inputs": {
+      "images": [
+        "4",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "预览图像"
+    }
+  },
+  "6": {
+    "inputs": {
+      "value": 1080
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "$width.value:image width"
+    }
+  },
+  "7": {
+    "inputs": {
+      "value": 1920
+    },
+    "class_type": "easy int",
+    "_meta": {
+      "title": "$height.value:image height"
+    }
+  },
+  "8": {
+    "inputs": {
+      "text": "<!DOCTYPE html>\n<html lang=\"zh-CN\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"template:media-width\" content=\"1024\">\n    <meta name=\"template:media-height\" content=\"1024\">\n    <meta name=\"viewport\" content=\"width=1080, height=1920\">\n    <title>人生感悟 - 1080x1920</title>\n    <style>\n    @font-face {\n        font-family: 'SourceHanSansCN';\n        src: url('https://modelscope.cn/datasets/svjack/temp/resolve/master/SourceHanSansCN-Bold.ttf') format('truetype');\n        font-weight: normal;\n        font-style: normal;\n        font-display: swap;\n    }\n    @font-face {\n        font-family: 'SourceHanSansCN';\n        src: url('https://modelscope.cn/datasets/svjack/temp/resolve/master/SourceHanSansCN-Regular.ttf') format('truetype');\n        font-weight: bold;\n        font-style: normal;\n        font-display: swap;\n    }\n    @font-face {\n        font-family: 'LongCang';\n        src: url('https://modelscope.cn/datasets/svjack/temp/resolve/master/Long-Cang-Regular.ttf') format('truetype');\n        font-weight: normal;\n        font-style: normal;\n        font-display: swap;\n    }\n        * { margin: 0; padding: 0; box-sizing: border-box; }\n\n        html, body { \n            width: 1080px; \n            height: 1920px; \n            overflow: hidden; \n        }\n\n        body {\n            font-family: 'SourceHanSansCN', sans-serif;\n            background: #F5F1E8; /* 浅色温暖的米黄色背景 */\n            position: relative;\n            display: flex;\n            flex-direction: column;\n            align-items: center;\n            overflow: hidden;\n        }\n\n        /* 背景花纹装饰层 */\n        .bg-pattern {\n            position: absolute;\n            top: 0;\n            left: 0;\n            width: 100%;\n            height: 100%;\n            z-index: 0;\n            pointer-events: none;\n            overflow: hidden;\n        }\n\n        /* 点状纹理图案 */\n        .dot-pattern {\n            position: absolute;\n            top: 0;\n            left: 0;\n            width: 100%;\n            height: 100%;\n            background-image: \n                radial-gradient(circle, rgba(120, 90, 70, 0.15) 1.5px, transparent 1.5px),\n                radial-gradient(circle, rgba(100, 75, 60, 0.12) 1px, transparent 1px);\n            background-size: 40px 40px, 80px 80px;\n            background-position: 0 0, 20px 20px;\n            opacity: 0.8;\n        }\n\n        /* 网格纹理图案 */\n        .grid-pattern {\n            position: absolute;\n            top: 0;\n            left: 0;\n            width: 100%;\n            height: 100%;\n            background-image: \n                linear-gradient(rgba(110, 85, 65, 0.12) 1px, transparent 1px),\n                linear-gradient(90deg, rgba(110, 85, 65, 0.12) 1px, transparent 1px);\n            background-size: 60px 60px;\n            opacity: 0.7;\n        }\n\n        /* 装饰性圆形元素 */\n        .decorative-circle {\n            position: absolute;\n            border-radius: 50%;\n            border: 1.5px solid rgba(110, 85, 65, 0.15);\n            background: rgba(140, 110, 90, 0.08);\n        }\n\n        .circle-1 {\n            width: 400px;\n            height: 400px;\n            top: -150px;\n            right: -100px;\n        }\n\n        .circle-2 {\n            width: 300px;\n            height: 300px;\n            bottom: -100px;\n            left: -80px;\n        }\n\n        .circle-3 {\n            width: 200px;\n            height: 200px;\n            top: 50%;\n            left: -50px;\n            transform: translateY(-50%);\n        }\n\n        /* 波浪纹理（可选，更柔和） */\n        .wave-pattern {\n            position: absolute;\n            top: 0;\n            left: 0;\n            width: 100%;\n            height: 100%;\n            background-image: \n                repeating-linear-gradient(\n                    45deg,\n                    transparent,\n                    transparent 10px,\n                    rgba(110, 85, 65, 0.08) 10px,\n                    rgba(110, 85, 65, 0.08) 20px\n                );\n            opacity: 0.6;\n        }\n\n        /* 顶部标题区域 */\n        .header {\n            margin-top: 200px;\n            text-align: center;\n            position: relative;\n            z-index: 2;\n        }\n\n        .title {\n            font-size: 80px;\n            font-weight: 900;\n            line-height: 1.4;\n            color: #1A1611; /* 深棕色/黑色 */\n            letter-spacing: 3px;\n            text-shadow: \n                1px 1px 0 rgba(0, 0, 0, 0.2),\n                2px 2px 2px rgba(0, 0, 0, 0.15);\n            /* 模拟略微纹理效果 */\n            background: linear-gradient(135deg, #1A1611 0%, #2C2416 50%, #1A1611 100%);\n            -webkit-background-clip: text;\n            -webkit-text-fill-color: transparent;\n            background-clip: text;\n            filter: contrast(1.1) brightness(0.9);\n        }\n\n        .content {\n            display: flex;\n            flex: 1;\n            justify-content: center;\n            align-items: center;\n            position: relative;\n            z-index: 2;\n        }\n\n        .content img {\n            width: 600px;\n            height: 600px;\n            object-fit: contain;\n            position: relative;\n            z-index: 1;\n        }\n\n        /* 底部文字区域 */\n        .bottom-section {\n            /* padding: 60px 80px 160px; */\n            padding: 0 40px;\n            text-align: center;\n            position: relative;\n            z-index: 2;\n            margin-bottom: 200px;\n        }\n\n        .content-text {\n            font-size: 50px;\n            font-weight: 400;\n            color: #000;\n            line-height: 1.8;\n            margin-bottom: 30px;\n        }\n\n        .author {\n            width: 100%;\n            font-size: 30px;\n            font-family: 'LongCang', cursive;\n            text-shadow: -1px -1px 0 #000,\n                        1px -1px 0 #000,\n                        -1px 1px 0 #000,\n                        1px 1px 0 #000;\n            margin : 0 20px 20px 0;\n            text-align: right;\n            position: relative;\n            z-index: 2;\n        }\n    </style>\n</head>\n<body>\n    <!-- 背景花纹层 -->\n    <div class=\"bg-pattern\">\n        <!-- 点状纹理 -->\n        <div class=\"dot-pattern\"></div>\n        <!-- 网格纹理 -->\n        <div class=\"grid-pattern\"></div>\n        <!-- 波浪纹理（可选，如需更柔和效果可取消注释） -->\n        <!-- <div class=\"wave-pattern\"></div> -->\n        <!-- 装饰性圆形 -->\n        <div class=\"decorative-circle circle-1\"></div>\n        <div class=\"decorative-circle circle-2\"></div>\n        <div class=\"decorative-circle circle-3\"></div>\n    </div>\n\n    <!-- 顶部标题 -->\n    <div class=\"header\">\n        <div class=\"title\">{{title}}</div>\n    </div>\n\n    <!-- 中央插图 -->\n    <div class=\"content\">\n        <img \n            src=\"{{image}}\"\n        />\n    </div>\n\n    <!-- 底部文字 -->\n    <div class=\"bottom-section\">\n        <div class=\"content-text\">{{text}}</div>\n    </div>\n\n    <div class=\"author\">{{author=@Pixelle.AI}}</div>\n</body>\n</html>"
+    },
+    "class_type": "Text _O",
+    "_meta": {
+      "title": "$html_template_content.text:html template content"
+    }
+  },
+  "9": {
+    "inputs": {
+      "image": "example.png"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "$image.image!:image"
+    }
+  },
+  "10": {
+    "inputs": {
+      "text": ""
+    },
+    "class_type": "Text _O",
+    "_meta": {
+      "title": "$title.text!:title"
+    }
+  },
+  "11": {
+    "inputs": {
+      "text": ""
+    },
+    "class_type": "Text _O",
+    "_meta": {
+      "title": "$text.text!:text"
+    }
+  },
+  "12": {
+    "inputs": {
+      "text": "这里使用的html模板文件的内容（作为$html_template_content.text:html template content的输入） \n包含图片域 image\n和文本域 title text\n下面是一个极简的例子 \n\n<!DOCTYPE html>\n<html lang=\"zh-CN\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"template:media-width\" content=\"1024\">\n    <meta name=\"template:media-height\" content=\"1024\">\n    <meta name=\"viewport\" content=\"width=1080, height=1920\">\n    <title>人生感悟 - 1080x1920</title>\n    <style>\n    @font-face {\n        font-family: 'SourceHanSansCN';\n        src: url('https://modelscope.cn/datasets/svjack/temp/resolve/master/SourceHanSansCN-Bold.ttf') format('truetype');\n        font-weight: normal;\n        font-style: normal;\n        font-display: swap;\n    }\n    @font-face {\n        font-family: 'SourceHanSansCN';\n        src: url('https://modelscope.cn/datasets/svjack/temp/resolve/master/SourceHanSansCN-Regular.ttf') format('truetype');\n        font-weight: bold;\n        font-style: normal;\n        font-display: swap;\n    }\n    @font-face {\n        font-family: 'LongCang';\n        src: url('https://modelscope.cn/datasets/svjack/temp/resolve/master/Long-Cang-Regular.ttf') format('truetype');\n        font-weight: normal;\n        font-style: normal;\n        font-display: swap;\n    }\n        * { margin: 0; padding: 0; box-sizing: border-box; }\n\n        html, body { \n            width: 1080px; \n            height: 1920px; \n            overflow: hidden; \n        }\n\n        body {\n            font-family: 'SourceHanSansCN', sans-serif;\n            background: #F5F1E8; /* 浅色温暖的米黄色背景 */\n            position: relative;\n            display: flex;\n            flex-direction: column;\n            align-items: center;\n            overflow: hidden;\n        }\n\n        /* 背景花纹装饰层 */\n        .bg-pattern {\n            position: absolute;\n            top: 0;\n            left: 0;\n            width: 100%;\n            height: 100%;\n            z-index: 0;\n            pointer-events: none;\n            overflow: hidden;\n        }\n\n        /* 点状纹理图案 */\n        .dot-pattern {\n            position: absolute;\n            top: 0;\n            left: 0;\n            width: 100%;\n            height: 100%;\n            background-image: \n                radial-gradient(circle, rgba(120, 90, 70, 0.15) 1.5px, transparent 1.5px),\n                radial-gradient(circle, rgba(100, 75, 60, 0.12) 1px, transparent 1px);\n            background-size: 40px 40px, 80px 80px;\n            background-position: 0 0, 20px 20px;\n            opacity: 0.8;\n        }\n\n        /* 网格纹理图案 */\n        .grid-pattern {\n            position: absolute;\n            top: 0;\n            left: 0;\n            width: 100%;\n            height: 100%;\n            background-image: \n                linear-gradient(rgba(110, 85, 65, 0.12) 1px, transparent 1px),\n                linear-gradient(90deg, rgba(110, 85, 65, 0.12) 1px, transparent 1px);\n            background-size: 60px 60px;\n            opacity: 0.7;\n        }\n\n        /* 装饰性圆形元素 */\n        .decorative-circle {\n            position: absolute;\n            border-radius: 50%;\n            border: 1.5px solid rgba(110, 85, 65, 0.15);\n            background: rgba(140, 110, 90, 0.08);\n        }\n\n        .circle-1 {\n            width: 400px;\n            height: 400px;\n            top: -150px;\n            right: -100px;\n        }\n\n        .circle-2 {\n            width: 300px;\n            height: 300px;\n            bottom: -100px;\n            left: -80px;\n        }\n\n        .circle-3 {\n            width: 200px;\n            height: 200px;\n            top: 50%;\n            left: -50px;\n            transform: translateY(-50%);\n        }\n\n        /* 波浪纹理（可选，更柔和） */\n        .wave-pattern {\n            position: absolute;\n            top: 0;\n            left: 0;\n            width: 100%;\n            height: 100%;\n            background-image: \n                repeating-linear-gradient(\n                    45deg,\n                    transparent,\n                    transparent 10px,\n                    rgba(110, 85, 65, 0.08) 10px,\n                    rgba(110, 85, 65, 0.08) 20px\n                );\n            opacity: 0.6;\n        }\n\n        /* 顶部标题区域 */\n        .header {\n            margin-top: 200px;\n            text-align: center;\n            position: relative;\n            z-index: 2;\n        }\n\n        .title {\n            font-size: 80px;\n            font-weight: 900;\n            line-height: 1.4;\n            color: #1A1611; /* 深棕色/黑色 */\n            letter-spacing: 3px;\n            text-shadow: \n                1px 1px 0 rgba(0, 0, 0, 0.2),\n                2px 2px 2px rgba(0, 0, 0, 0.15);\n            /* 模拟略微纹理效果 */\n            background: linear-gradient(135deg, #1A1611 0%, #2C2416 50%, #1A1611 100%);\n            -webkit-background-clip: text;\n            -webkit-text-fill-color: transparent;\n            background-clip: text;\n            filter: contrast(1.1) brightness(0.9);\n        }\n\n        .content {\n            display: flex;\n            flex: 1;\n            justify-content: center;\n            align-items: center;\n            position: relative;\n            z-index: 2;\n        }\n\n        .content img {\n            width: 600px;\n            height: 600px;\n            object-fit: contain;\n            position: relative;\n            z-index: 1;\n        }\n\n        /* 底部文字区域 */\n        .bottom-section {\n            /* padding: 60px 80px 160px; */\n            padding: 0 40px;\n            text-align: center;\n            position: relative;\n            z-index: 2;\n            margin-bottom: 200px;\n        }\n\n        .content-text {\n            font-size: 50px;\n            font-weight: 400;\n            color: #000;\n            line-height: 1.8;\n            margin-bottom: 30px;\n        }\n\n        .author {\n            width: 100%;\n            font-size: 30px;\n            font-family: 'LongCang', cursive;\n            text-shadow: -1px -1px 0 #000,\n                        1px -1px 0 #000,\n                        -1px 1px 0 #000,\n                        1px 1px 0 #000;\n            margin : 0 20px 20px 0;\n            text-align: right;\n            position: relative;\n            z-index: 2;\n        }\n    </style>\n</head>\n<body>\n    <!-- 背景花纹层 -->\n    <div class=\"bg-pattern\">\n        <!-- 点状纹理 -->\n        <div class=\"dot-pattern\"></div>\n        <!-- 网格纹理 -->\n        <div class=\"grid-pattern\"></div>\n        <!-- 波浪纹理（可选，如需更柔和效果可取消注释） -->\n        <!-- <div class=\"wave-pattern\"></div> -->\n        <!-- 装饰性圆形 -->\n        <div class=\"decorative-circle circle-1\"></div>\n        <div class=\"decorative-circle circle-2\"></div>\n        <div class=\"decorative-circle circle-3\"></div>\n    </div>\n\n    <!-- 顶部标题 -->\n    <div class=\"header\">\n        <div class=\"title\">{{title}}</div>\n    </div>\n\n    <!-- 中央插图 -->\n    <div class=\"content\">\n        <img \n            src=\"{{image}}\"\n        />\n    </div>\n\n    <!-- 底部文字 -->\n    <div class=\"bottom-section\">\n        <div class=\"content-text\">{{text}}</div>\n    </div>\n\n</body>\n</html>\n\n不得包含任何其它待渲染域\n且固定使用上面的3个字体文件\n\n下面是使用此工具的例子：\n\n1、完成一个3张流行音乐演唱会的广告任务,使用z_image_turbo生成3张图片，图片中不包含任何文字，\n并生成统一的流行风格html模板代码（字体采用要符合模板说明中的要求，模板中不包含任何按钮，且结构简单），并进行3次渲染。\n\n2、完成一个4张中国历史建筑的广告任务,使用z_image_turbo生成4张图片，图片中不包含任何文字，\n并生成统一的流行风格html模板代码（采用灰色绿色相间的古朴风格，字体采用要符合模板说明中的要求，模板中不包含任何按钮，且结构简单），并进行4次渲染。\n\n\n\n"
+    },
+    "class_type": "Text _O",
+    "_meta": {
+      "title": "MCP"
+    }
+  }
+}
