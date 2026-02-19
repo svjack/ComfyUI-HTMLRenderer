@@ -21,6 +21,8 @@ chromedriver --version
 ```bash
 conda activate system
 cd ComfyUI/custom_nodes
+pip install playwright
+playwright install chromium
 git clone https://github.com/svjack/ComfyUI-HTMLRenderer
 pip install -r ComfyUI-HTMLRenderer/requirements.txt
 ```
