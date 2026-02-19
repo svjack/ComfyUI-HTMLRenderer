@@ -24,3 +24,5 @@ cd ComfyUI/custom_nodes
 git clone https://github.com/svjack/ComfyUI-HTMLRenderer
 pip install -r ComfyUI-HTMLRenderer/requirements.txt
 ```
+
+<img width="1314" height="622" alt="捕获" src="https://github.com/user-attachments/assets/d58bc4c6-6ca9-415b-bc64-3555f1e69eb7" />
