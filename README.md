@@ -33,5 +33,5 @@ pip install -r ComfyUI-HTMLRenderer/requirements.txt
 
 - HTMLVideoRecorderPlaywright
 
-<img width="1704" height="695" alt="捕获" src="https://github.com/user-attachments/assets/f15146cd-415c-4ed2-b5fb-f57da3bf1dcd" />
+<img width="1562" height="673" alt="捕获" src="https://github.com/user-attachments/assets/3de09204-309f-45f7-a84a-801e353ea040" />
 
