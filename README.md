@@ -1,5 +1,9 @@
 # ComfyUI-HTMLRenderer
 
+```bash
+sudo apt-get update && sudo apt-get install git-lfs cbm ffmpeg
+```
+
 ## Install Chrome in Linux
 ```bash
 ### install chorme in linux
